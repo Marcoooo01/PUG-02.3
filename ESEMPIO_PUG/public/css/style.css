@@ -53,15 +53,15 @@ body {
 /* Profile Card
    ========================================================================== */
 
-.person {
+.castel {
   text-align: center;
 }
 
-.person > * {
+.castel > * {
   margin-bottom: 5px;
 }
 
-.person-image {
+.-image {
   width: 100%;
   height: 300px;
 }
