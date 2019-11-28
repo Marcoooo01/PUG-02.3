@@ -5,13 +5,15 @@ html
    link(rel='stylesheet', href='/css/style.css')
    meta(name="viewport" content="width=device-width, initial-scale=1")
  body
-   header.header
+   header
          h1 #{title}
-   article.container
-     each castel in castelli
-       div.person
-         div.person-image(style=`background: url('/images/${castel.imgSrc}') top center no-repeat; background-size: cover;`)
-         h2.person-name
-           | #{casteò.title}
-         a(href=`/profile?id=${castel.id}`)
-           | View Profile
+   br
+   article
+     each c in castelli
+       div
+         img(src=`/img/${c.Copertina}`)
+         h2 #{c.Name}
+         h2 #{c.Theme}
+         h2 #{c.Year}
+         a(href=`/istruzioni?id=${c.Number}`)  View Profile
+         hr

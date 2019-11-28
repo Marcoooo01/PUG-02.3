@@ -1,5 +1,5 @@
 const express = require('express');
-const people = require('./people.json'); //Copia il file people.json dentro la variabile people
+const castelli = require('./castelli.json'); 
 const app = express();
 
 app.set('view engine', 'pug');
@@ -7,16 +7,16 @@ app.use(express.static(__dirname + '/public'));
 
 app.get('/', (req, res) => {
   res.render('index', {
-    title: 'Homepage',
-    people: people.profiles //Passa il vettore profiles alla pagina index.pug
+    title: 'Castelli',
+    castelli: castelli.castells 
   });
 });
 
-app.get('/profile', (req, res) => {
-  const person = people.profiles.find(p => p.id === req.query.id);
-  res.render('profile', {
-    title: `About ${person.firstname} ${person.lastname}`,
-    person,
+app.get('/istruzioni', (req, res) => {
+  const ca = castelli.castells.find(c => c.Number === req.query.Number);
+  res.render('istruzioni', {
+    title: `About ${ca.Name}`,
+    ca,
   });
 });
 
