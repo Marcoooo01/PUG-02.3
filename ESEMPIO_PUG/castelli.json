@@ -1,60 +1,30 @@
 {
  "castells": [
    {
-        "Number": "LEGO 0375",
+        "Number": "LEGO_0375",
         "Theme": "Castle ",
         "Name": "Yellow Castle" ,
         "Year": 1978,
         "Copertina": "0375b.jpg",
-        "Istruzioni": [
-            {
-                "Link1": "002.jpg"
-            },
-            {
-                "Link2": "003.jpg"
-            },
-            {
-                "Link3": "004.jpg"
-            }
-        ]
+        "Istruzioni": ["002.jpg","003.jpg","004.jpg"]
    },
 
    {
-        "Number": "LEGO 8630",
+        "Number": "LEGO_8630",
         "Theme": "Agents",
         "Name": "Gold Hunt" ,
         "Year": 2008,
         "Copertina": "8630b.jpg",
-        "Istruzioni": [
-            {
-                "Link1": ""
-            },
-            {
-                "Link2": ""
-            },
-            {
-                "Link3": ""
-            }
-        ]
+        "Istruzioni": ["002(1).jpg","003(1).jpg","004(1).jpg"]
    },
 
    {
-        "Number": "LEGO 4850",
+        "Number": "LEGO_4850",
         "Theme": "Spider-Man",
         "Name": "Police Chase" ,
         "Year": 2003,
         "Copertina": "4850b.jpg",
-        "Istruzioni": [
-            {
-                "Link1": ""
-            },
-            {
-                "Link2": ""
-            },
-            {
-                "Link3": ""
-            }
-        ]
+        "Istruzioni": ["002(2).jpg","003(2).jpg","004(2).jpg"]
    }
  ]
 }

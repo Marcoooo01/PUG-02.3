@@ -14,8 +14,9 @@ app.get('/', (req, res) => {
 
 app.get('/istruzioni', (req, res) => {
   const ca = castelli.castells.find(c => c.Number === req.query.Number);
+  console.log(req.query.Number);
   res.render('istruzioni', {
-    title: `About ${ca.Name}`,
+    title: `Istruzioni per: ${ca.Name}`,
     ca,
   });
 });

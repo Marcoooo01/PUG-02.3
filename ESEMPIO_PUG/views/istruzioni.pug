@@ -7,8 +7,5 @@ html
    header
          h1 #{title}
    div
-     img(src=`/img/${c.Istruzioni.Link1}`)
-     br
-     img(src=`/img/${c.Istruzioni.Link2}`)
-     br
-     img(src=`/img/${c.Istruzioni.Link3}`)
+     each immagine in ca.Istruzioni
+       img(src=`img/${immagine}`)
