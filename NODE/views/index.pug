@@ -1,0 +1,19 @@
+doctype html
+html
+ head
+   title #{title}
+   link(rel='stylesheet', href='/css/style.css')
+   meta(name="viewport" content="width=device-width, initial-scale=1")
+ body
+   header
+         h1 #{title}
+   br
+   article
+     each c in castelli
+       div
+         img(src=`/img/${c.Copertina}`)
+         h2 #{c.Name}
+         h2 #{c.Theme}
+         h2 #{c.Year}
+         a(href=`/istruzioni?Ciao=${c.Number}`)  View Profile
+         hr
