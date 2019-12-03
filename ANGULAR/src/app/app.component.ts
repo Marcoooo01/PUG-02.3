@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {HttpClient} from '@angular/common/http'; //HTTP CLIENT
+import {HttpClient} from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { castelliM } from './castelliM.model';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,13 +9,15 @@ import {HttpClient} from '@angular/common/http'; //HTTP CLIENT
 })
 export class AppComponent implements OnInit{
   c: string[];
-    constructor(private http: HttpClient) {}
+  castell : castelliM[];
+  oFoo : Observable<castelliM[]>;
+  data: Object;
+  constructor(public http: HttpClient) { }
+
 
     ngOnInit(): void {
-      // Make the HTTP request:
-      this.http.get('https://3000-a7dfb443-174b-45e7-a4a1-ffa8200f6530.ws-eu01.gitpod.io/api/castelli').subscribe(data => {
-        // Read the result field from the JSON response.
-        this.c = data['castells'];
-      });
+      this.oFoo = this.http.get<castelliM[]>('https://3000-b7ad4af5-04dd-4fb9-beeb-27c7a8a0e1ee.ws-eu01.gitpod.io/api/castelli');
+      this.oFoo.subscribe(data => {this.castell = data;}
+        );
     }
 }

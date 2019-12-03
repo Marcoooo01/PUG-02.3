@@ -2,8 +2,8 @@ const express = require('express');
 const castelli = require('./castelli.json'); 
 const app = express();
 const path = require('path');
-var cors = require('cors'); //HTTP access control (CORS) for cross origin requests
-app.use(cors()); //Setup cors
+var cors = require('cors'); 
+app.use(cors()); 
 
 app.set('view engine', 'pug');
 app.use(express.static(__dirname + '/public'));
