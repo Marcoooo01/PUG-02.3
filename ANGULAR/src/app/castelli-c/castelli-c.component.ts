@@ -17,7 +17,7 @@ export class CastelliCComponent {
 
   makeTypedRequest() : void
   {
-    this.oFoo = this.http.get<castelliM[]>('https://3000-faf35fc3-fb58-4e8c-a965-e030c8f4e597.ws-eu01.gitpod.io/api/castelli');
+    this.oFoo = this.http.get<castelliM[]>('https://3000-cc51d5cd-c869-48e2-b713-82e0124629e8.ws-eu01.gitpod.io/api/castelli');
     this.oFoo.subscribe(data => {this.castell = data['castells'];});
   }
 
