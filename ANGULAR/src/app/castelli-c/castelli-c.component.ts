@@ -11,13 +11,14 @@ export class CastelliCComponent {
   c: string[];
   castell : castelliM[];
   oFoo : Observable<castelliM[]>;
-  data: Object;
-  constructor(public http: HttpClient) { }
+  constructor(public http: HttpClient) {
+    this.makeTypedRequest();
+  }
 
   makeTypedRequest() : void
   {
-    this.oFoo = this.http.get<castelliM[]>('https://3000-d1638ee2-6a43-496d-a413-af468aac1e96.ws-eu01.gitpod.io/api/castelli');
-    this.oFoo.subscribe(data => {this.castell = data;});
+    this.oFoo = this.http.get<castelliM[]>('https://3000-faf35fc3-fb58-4e8c-a965-e030c8f4e597.ws-eu01.gitpod.io/api/castelli');
+    this.oFoo.subscribe(data => {this.castell = data['castells'];});
   }
 
 }
